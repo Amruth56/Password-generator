@@ -18,4 +18,10 @@ function generatePassword() {
   }
 
   passwordBox.value = psswd;
+
+  document.getElementById("copy").addEventListener("click", function () {
+    passwordBox.select();
+    document.execCommand("copy");
+    alert("Password copied to clipboard!");
+  });
 }
